@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: #222;
+  height: 50px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+.App-title {
+  font-size: 1.5em;
+}
+.App-intro {
+  font-size: large;
+}
+.images-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.image-container {
+  position: relative;
+  width: 18vw;
+  height: 18vw;
+  margin: .5vw;
+  border: outset 1px #222;
+  border-radius: 2%;
+  opacity: .8;
+  cursor: pointer;
+}
+.image-container:hover {
+  opacity: 1;
+}
+.selected {
+  opacity: 1 !important;
+}
+.image {
+  width: 18vw;
+  height: 18vw;
+}
+.correct {
+  border-color: green;
+  cursor: auto;
+  opacity: 1;
+}
+.wrong {
+  border-color: red;
+  cursor: auto;
+  opacity: 1;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.hide {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+.wrong-image {
+  position: absolute;
+  height: 18vw;
+  opacity: .4;
+  width: 18vw;
+}
+.enlarge {
+  height: 36vw;
+  width: 36vw;
+  transition: height 2s linear, width 2s linear;
+}
+.stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.stats-counter-title {
+  font-size: 1.2vw;
+}
+.stats-counter {
+  margin: 20px;
+}
+.play-btn {
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+  background: whitesmoke;
+  border: #222 outset 1px;
+  border-radius: 2%;
+}
+.play-btn:hover {
+  opacity: .6;
+}
+.play-container {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+.play-container-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.hotkey-number {
+  position: absolute;
+  top: 0;
+  opacity: .2;
+  font-size: 8vw;
+}
+@media screen and (max-width: 800px) {
+  .image-container {
+    width: 30vw;
+    height: 30vw;
+    margin: .5vw 1vw;
+  }
+  .image {
+    width: 30vw;
+    height: 30vw;
+  }
+  .wrong-image {
+    width: 30vw;
+    height: 30vw;
+  }
+  .enlarge {
+    width: 60vw;
+    height: 60vw;
+  }
+}
